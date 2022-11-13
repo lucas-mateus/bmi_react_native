@@ -2,6 +2,8 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Card } from "../components/Card";
 import { colors } from "../constants";
+import { ImcResult } from "../components/ImcResult";
+
 
 export function Result({ navigation, route }) {
   const { imc } = route.params;
@@ -14,6 +16,7 @@ export function Result({ navigation, route }) {
           <Text style={styles.imcText}>{imc.toFixed(2)}</Text>
         </View>
       </Card>
+      <ImcResult imc={imc} />
     </View>
   );
 }
